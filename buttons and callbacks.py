@@ -1,3 +1,4 @@
+#list globals
 global usernames
 usernames = []
 global passwords
@@ -5,7 +6,7 @@ passwords = {}
 buttons = ""
 
 
-
+#signup function, checks if username is in list if not assigns password typed to the give username
 def signupUser():
     global usernames
     createusername = input("School ID#: ")
@@ -17,7 +18,7 @@ def signupUser():
         passwords[createusername] = createpassword
         print("\n Congratulations, your account has been created \n")
         openMenu()
-
+#login function, checks if username and password match in the lits if not unsuccessful and restarts
 def loginUser():
     urusername = input("School ID#: ")
     urpassword = input("Password: ")
@@ -29,7 +30,7 @@ def loginUser():
         print ("\n Login Unsuccessful, you will be redirected to the home page")
         openMenu()
 
-
+#main menu functions input as well as 3 buttons
 def openMenu():
 
     buttons = input("Hello \n Press '1' to Login, '2' to Sign Up, and '3' to Quit")
@@ -42,7 +43,7 @@ def openMenu():
 while buttons == "3":
     print("See you again soon")
     openMenu()
-
+#starts the code
 openMenu()
 
 
